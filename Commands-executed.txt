@@ -1,0 +1,12 @@
+Install Minikube
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
+minikube version
+minikube start
+minikube status
+kubectl get nodes
+kubectl create namespace kube-test
+kubectl get namespaces
+kubectl get pods -n kube-test
+kubectl config set-context --current --namespace=kube-test
+kubectl delete namespace kube-test
